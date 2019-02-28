@@ -14,10 +14,6 @@ const registry = new Registry();
 registerRouterInjector(routes, registry);
 registerThemeInjector(dojo, registry);
 const context = registerI18nInjector({ locale: 'en'}, registry);
-// registry.defineInjector('locale', (invalidator) => {
-// 	context.setInvalidator(invalidator);
-// 	return () => context;
-// })
 
 const r = renderer(() => w(App, {}));
 r.mount({ registry });
@@ -25,6 +21,7 @@ r.mount({ registry });
 const locales = ['en', 'fr', 'de'];
 let localIndex = 0;
 
+// switch locale every 10 seconds
 setInterval(() => {
 	const newLocaleIndex = localIndex + 1;
 	if (newLocaleIndex > locales.length - 1) {
@@ -33,4 +30,4 @@ setInterval(() => {
 		localIndex = newLocaleIndex;
 	}
 	context.set({ locale: locales[newLocaleIndex] });
-}, 1000);
+}, 10000);
