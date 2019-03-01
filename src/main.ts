@@ -13,21 +13,13 @@ import App from './App';
 const registry = new Registry();
 registerRouterInjector(routes, registry);
 registerThemeInjector(dojo, registry);
-const context = registerI18nInjector({ locale: 'en'}, registry);
+const injector = registerI18nInjector({ locale: 'en' }, registry);
+registry.defineInjector('locale', (invalidator) => {
+	function localeSwitcher(locale: string) {
+		injector.set({ locale });
+	}
+	return () => localeSwitcher;
+});
 
 const r = renderer(() => w(App, {}));
 r.mount({ registry });
-
-const locales = ['en', 'fr', 'de'];
-let localIndex = 0;
-
-// switch locale every 10 seconds
-setInterval(() => {
-	const newLocaleIndex = localIndex + 1;
-	if (newLocaleIndex > locales.length - 1) {
-		localIndex = 0;
-	} else {
-		localIndex = newLocaleIndex;
-	}
-	context.set({ locale: locales[newLocaleIndex] });
-}, 10000);
