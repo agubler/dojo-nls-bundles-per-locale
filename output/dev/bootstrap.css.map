@@ -1,0 +1,1 @@
+{"version":3,"sources":["/Users/Anthony/development/test-beds/nls-bundles-per-locale/src/main.css"],"names":[],"mappings":"AACA,KACC,SAAU,AACV,UAAW,AACX,qDAA4D,CAC5D","file":"bootstrap.css","sourcesContent":["/* Put your styles and imports here */\nbody {\n\tmargin: 0;\n\tpadding: 0;\n\tfont-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n"]}
