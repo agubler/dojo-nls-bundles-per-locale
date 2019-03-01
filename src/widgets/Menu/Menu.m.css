@@ -21,3 +21,17 @@
 .selected {
 	color: darkorange;
 }
+
+.locale {
+	/*position: absolute;*/
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.wrapper {
+	width: 100px;
+}
