@@ -1,3 +1,3 @@
 export default {
-	title: 'Page d\'accueil'
+	title: "Page d'accueil"
 };

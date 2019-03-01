@@ -4,6 +4,7 @@ export default {
 		de: () => import('./de')
 	},
 	messages: {
-		welcome: 'Welcome Page'
+		welcome: 'Welcome Page',
+		user: 'User'
 	}
-}
+};

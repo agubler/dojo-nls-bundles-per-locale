@@ -9,11 +9,11 @@
 }
 
 .link {
-	min-width: 140px;
+	min-width: 120px;
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 18px;
+	padding: 10px;
 	color: black;
 	box-sizing: border-box;
 }
@@ -22,16 +22,29 @@
 	color: darkorange;
 }
 
-.locale {
-	/*position: absolute;*/
+.select {
+	width: 80px;
+	min-width: 0px;
 }
 
 .container {
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 }
 
-.wrapper {
-	width: 100px;
+.columnContainer .link {
+	text-align: left;
+}
+
+.columnContainer .selectWrapper {
+	padding-top: 5px;
+}
+
+.columnContainer {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.selectWrapper {
+	padding: 0 8px;
 }

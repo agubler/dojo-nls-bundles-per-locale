@@ -6,6 +6,7 @@
     "build": "dojo build --mode dist",
     "build:dev": "dojo build --mode dev",
     "test": "dojo test",
+    "prettier": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
     "test:unit": "dojo build --mode unit && dojo test --unit --config local",
     "test:functional": "dojo build --mode functional && dojo test --functional --config local",
     "test:all": "dojo build --mode unit && dojo build --mode functional && dojo test --all --config local"
@@ -21,6 +22,14 @@
     "@dojo/cli-build-app": "^5.0.0",
     "@dojo/cli-test-intern": "^5.0.0",
     "@types/node": "~9.6.5",
+    "prettier": "^1.16.4",
     "typescript": "~2.6.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 4,
+    "useTabs": true,
+    "printWidth": 120,
+    "arrowParens": "always"
   }
 }

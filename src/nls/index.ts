@@ -4,6 +4,6 @@ export default {
 		de: () => import('./de')
 	},
 	messages: {
-		title: 'About Page'
+		user: 'User'
 	}
 };
