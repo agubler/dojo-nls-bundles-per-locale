@@ -2,12 +2,14 @@
 	"build-app": {
 		"bundles": {
 			"de": [
+				"src/nls/de/index",
 				"src/widgets/About/nls/de/index",
 				"src/widgets/Home/nls/de/index",
 				"src/widgets/Menu/nls/de/index",
 				"src/widgets/Profile/nls/de/index"
 			],
 			"fr": [
+				"src/nls/fr/index",
 				"src/widgets/About/nls/fr/index",
 				"src/widgets/Home/nls/fr/index",
 				"src/widgets/Menu/nls/fr/index",
