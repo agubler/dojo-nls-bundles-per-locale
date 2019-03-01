@@ -15,6 +15,7 @@ interface MenuProperties {
 
 export default class Menu extends I18nMixin(WidgetBase)<MenuProperties> {
 	private _locales = ['en', 'de', 'fr'];
+	@watch() private _locale = 'en';
 	@watch() private _collapsed = false;
 	protected render() {
 		const { messages } = this.localizeBundle(bundle);
@@ -61,10 +62,12 @@ export default class Menu extends I18nMixin(WidgetBase)<MenuProperties> {
 							extraClasses: {
 								input: css.select
 							},
+							value: this._locale,
 							options: this._locales,
 							useNativeElement: true,
 							getOptionValue: (option: string) => option,
 							onChange: (value: string) => {
+								this._locale = value;
 								this.properties.localeSwitcher(value);
 							}
 						})
